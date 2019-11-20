@@ -18,11 +18,11 @@ except OSError:
 x = data[:, 0]
 y = data[:, 1]
 
-p = np.poly1d(np.polyfit(x, y, args.degree))
+p = np.poly1d(np.polyfit(x, y, args.deg))
 t = np.linspace(x[0], x[len(x) - 1], 1000)
 
 title = ""
-n = args.degree
+n = args.deg
 primera_iteracion = True
 for coeff in p.coeffs:
     if primera_iteracion:
